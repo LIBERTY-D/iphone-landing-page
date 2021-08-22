@@ -1,0 +1,477 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+
+* {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  /* outline: none; */
+  /* border: none; */
+  text-decoration: none;
+  resize: none;
+}
+body,
+html {
+  scroll-behavior: smooth;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* right: 0; */
+  width: 100%;
+  z-index: 1000;
+  padding: 20px 9%;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  justify-content: space-between;
+}
+header .logo {
+  font-size: 25px;
+  color: #333;
+}
+header .image {
+  width: 45px;
+  height: 45px;
+}
+header .navbar a {
+  font-size: 20px;
+  color: #666;
+  margin-left: 20px;
+}
+header .navbar a:hover {
+  color: #999;
+}
+.container {
+  display: flex;
+  min-height: 100vh;
+  gap: 15px;
+  align-items: center;
+  padding: 20px 9%;
+  position: relative;
+  overflow: hidden;
+}
+.container .content {
+  flex: 1 1 400px;
+}
+.container .image {
+  flex: 1 1 400px;
+  position: relative;
+  max-height: 200px;
+}
+.container .image .iphone {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+.container .image .iphone.active {
+  display: initial;
+}
+
+.container .content h3 {
+  color: #333;
+  font-size: 50px;
+}
+.container .content p {
+  color: #666;
+  font-size: 20px;
+  padding: 15px 0;
+}
+.container .content .btn {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 17px;
+  padding: 9px 40px;
+  color: #ddd;
+  background-color: #333;
+}
+.container .content .btn:hover {
+  background-color: #666;
+}
+.container .left,
+.container .right {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  text-align: center;
+  border: 2px solid #333;
+  font-size: 30px;
+  cursor: pointer;
+}
+.container .left {
+  left: 30px;
+}
+.container .right {
+  right: 30px;
+}
+.container .left:hover,
+.container .right:hover {
+  background: #333;
+  color: white;
+}
+header .fa-bars {
+  display: none;
+}
+.navbar .times {
+  display: none;
+}
+/* ABOUT */
+.about {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 8rem 9%;
+  background-color: rgb(10, 9, 9);
+  gap: 1.5rem;
+}
+.about .image {
+  flex: 1 1 200px;
+  height: 400px;
+}
+.about .about-content {
+  flex: 1 1 200px;
+}
+.about .about-iphone {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.about-content .header {
+  color: darkblue;
+  font-size: 1.3rem;
+}
+.about-content .header .underline {
+  max-width: 200px;
+  text-align: center;
+  height: 0.1rem;
+  background-color: white;
+}
+.about-content h3 {
+  color: lightsteelblue;
+  padding-top: 5px;
+}
+.about-content p {
+  color: #666;
+  padding: 0.5rem;
+}
+.about-content .header {
+  padding: 5px 9%;
+}
+.about-content .fa-check {
+  color: blue;
+}
+.about-content span {
+  color: cornsilk;
+}
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  text-align: center;
+  flex-wrap: wrap;
+  padding: 20px 9%;
+  background-color: #ddd;
+  min-height: 90vh;
+}
+
+.contact .image-container .image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.contact-us .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+
+.contact-us .form-container form .inputs {
+  display: flex;
+  flex: 1 1 40px;
+  gap: 1.5rem;
+  padding-bottom: 0.6rem;
+}
+
+.contact-us .form-container form {
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+  z-index: 100;
+  position: relative;
+}
+.contact .contact-us h1 {
+  color: #67598f;
+}
+
+input {
+  width: 50%;
+  padding: 0.3rem;
+  outline: none;
+  border: 0.1px solid #ddd;
+  border-radius: 0.5rem;
+}
+textarea {
+  width: 100%;
+  outline: none;
+  border: 0.1px solid #ddd;
+  border-radius: 0.5rem;
+}
+.contact-us {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+}
+.contact-us .form-container button {
+  width: 50%;
+  cursor: pointer;
+  border: 0.1px solid #ddd;
+  border-radius: 0.5rem;
+  background-color: crimson;
+}
+.contact-us .form-container button:hover {
+  background-color: rgb(238, 95, 124);
+}
+/* reviews */
+.reviews {
+  padding: 20px 9%;
+  min-height: 90vh;
+}
+.reviews .header {
+  color: rgb(64, 64, 66);
+  font-size: 1.3rem;
+  text-align: center;
+}
+.reviews .header span {
+  color: lightskyblue;
+}
+.reviews .header .underline {
+  max-width: 200px;
+  text-align: center;
+  height: 0.1rem;
+  margin: auto;
+  background-color: rgb(34, 34, 34);
+}
+.reviews .review .stars i {
+  color: orange;
+}
+.review-parent {
+  position: relative;
+  perspective: 1000px;
+}
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  font-size: 1.3rem;
+  color: rgb(44, 43, 43);
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.next {
+  right: -2rem;
+}
+.prev {
+  left: -2rem;
+}
+.reviews .reviews-container .image .review-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid #333;
+
+  margin-bottom: -8rem;
+}
+.reviews .reviews-container .image {
+  transform: translateY(-300%);
+}
+
+.reviews .reviews-container {
+  text-align: center;
+  border: 1px solid #666;
+  background-color: rgb(22, 22, 22);
+  max-width: 700px;
+  margin: auto;
+  border-radius: 0.5rem;
+  margin-top: 10rem;
+  transform-style: preserve-3d;
+  animation-name: rotate;
+  animation-duration: 0.4s;
+  animation-fill-mode: backwards;
+  animation-timing-function: linear;
+  display: none;
+}
+/* footer */
+footer {
+  background-color: #333;
+
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding: 20px 9%;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+footer a {
+  border: 0.1px solid #ccc;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+}
+
+footer a {
+  color: white;
+  font-size: 1.3rem;
+  position: relative;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+footer a:hover {
+  background-color: #ddd;
+}
+footer a::before {
+  content: "";
+  background-color: crimson;
+  color: white;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  border-radius: 0.5rem;
+  position: absolute;
+  transition: all 0.3s linear;
+}
+footer a:hover::before {
+  left: 0;
+  width: 100%;
+}
+@keyframes rotate {
+  0% {
+    transform: rotateX(180deg);
+  }
+}
+.reviews .reviews-container.show-review {
+  display: block;
+}
+.reviews .reviews-container .review {
+  margin-top: 2.5rem;
+  animation-name: opacity;
+  animation-duration: 0.4s;
+  animation-delay: 0.4s;
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+}
+.reviews .reviews-container .review h3 {
+  color: #666;
+  font-size: 1.5rem;
+}
+.reviews .reviews-container .review p {
+  color: #333;
+}
+
+@media (max-width: 860px) {
+  header {
+    background-color: #fff;
+    box-shadow: 0.1px 1px 0.3px rgba(0, 0, 0, 0.8);
+  }
+  header .fa-bars {
+    font-size: 20px;
+    border: 1px solid rgb(231, 227, 227);
+    padding: 0.5rem;
+    cursor: pointer;
+    display: block;
+    color: rgb(44, 43, 43);
+  }
+  header .navbar {
+    position: absolute;
+    top: 3.5rem;
+    left: 0rem;
+    background-color: #333;
+    width: 100vw;
+    /* SPECIFY HEIGHT WHICH LEADS TO OVERFLOW HIDDEN */
+    height: 0rem;
+    overflow: hidden;
+
+    transition: height 0.4s 0.2s ease-in-out;
+  }
+  header .navbar.show {
+    height: 190px;
+  }
+  header .navbar .times {
+    display: flex;
+    justify-content: flex-end;
+    color: red;
+    font-size: 20px;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+
+  header .navbar a {
+    display: block;
+    border-left: 5px solid crimson;
+    margin-bottom: 0.5rem;
+    padding-right: 0.3rem;
+  }
+  .container {
+    margin-top: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+  }
+  .container .content h3 {
+    color: #333;
+    font-size: 20px;
+  }
+  .container .content p {
+    font-size: 15px;
+  }
+
+  .container .left,
+  .container .right {
+    display: none;
+  }
+  .container .content {
+    flex: 1 1 200px;
+  }
+  .container .image {
+    flex: 1 1 200px;
+    position: relative;
+    max-height: 200px;
+  }
+  .about {
+    margin-top: 0.5rem;
+    padding: 20px 9%;
+    margin-bottom: 0.8rem;
+    min-height: 90vh;
+  }
+  .about-content .header {
+    font-size: 1.2rem;
+  }
+  footer a {
+    padding: 0.5rem 0.8rem;
+  }
+}
+@media (max-width: 550px) {
+  .container {
+    margin-top: 50px;
+  }
+}
